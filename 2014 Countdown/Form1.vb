@@ -6,7 +6,9 @@
         'Assigns the numbers to the variables
         'Repeats due to the Timer Tick
         Dim Days As Integer = 365 - System.DateTime.Now.DayOfYear
-        Dim Hours As Integer = 24 - System.DateTime.Now.Hour
+        'Without the -1 it is an hour behind Do not know why
+        'Just a minor fix
+        Dim Hours As Integer = 24 - System.DateTime.Now.Hour - 1
         Dim Minutes As Integer = 60 - System.DateTime.Now.Minute
         Dim Seconds As Integer = 60 - System.DateTime.Now.Second
         Dim Milli As Integer = 1000 - System.DateTime.Now.Millisecond
